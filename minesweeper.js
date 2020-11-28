@@ -42,3 +42,43 @@ function CreateGame(difficulty){
 }
 
 CreateGame(0);
+
+
+
+/*
+function round(num, places){
+    return Math.round(num * Math.pow(10,places))/Math.pow(10,places);
+}
+
+function Update(){
+    time += msFrequency;
+    if(time % 1 == 0) {
+        buttonElement.textContent = time.toString();
+        buttonSecret.disabled = false;
+        var think = time / 1000;
+        var actual = Math.round(performance.now()) / 1000
+        buttonSecret.textContent = 
+            "I think it's been " + think + "s\nBut it's actually been "
+             + actual + "s\nI am " + round((actual - think),2) + "s behind reality";
+
+    }
+    console.log(Math.round(performance.now()) + " " + time / 1000);
+}
+
+var buttonElement = document.getElementById('my-first-button');
+var buttonSecret = document.getElementById('secret-button');
+var time = 0;
+var msFrequency = 100;
+
+buttonElement.addEventListener('click',function (){
+    console.log("The button was pressed!");
+})
+buttonSecret.disabled = true;
+
+b4.addEventListener('click',() => {
+    hoverAudio.pause();
+    Audio("boing_x.wav").play();
+})
+
+setInterval(Update, msFrequency);
+*/
