@@ -1,10 +1,73 @@
-//alert(document.getElementByID("minesweeper-tile"));
+BOMB = -1;
+BLANK = 0;
+SEEN = 1;
+FLAGGED = 2;
 
 var board = [];
+var rows, cols, bombs;
+var firstClick = false;
+
+function Clicked(x, y, input){
+    //alert(x + " " + y);
+    // Is this the start of the game
+    if(firstClick){
+        //Generate board
+        GenerateBoard(x,y);
+        firstClick = false;
+    }
+
+    tile = board[x][y];
+    if(tile.Visibility == 0){
+        // Blank tile clicked
+        if(tile.Value == BOMB){
+            GameOver();
+            return;
+        } else {
+            tile.Value = AdjacentBombs(x,y);
+            tile.Object.src = String(tile.Value + ".png");
+        }
+    }
+}
+
+function AdjacentBombs(x,y){
+    adjBombs = 0;
+    for(var i = Math.max(x-1,0); i <= Math.min(x + 1,cols - 1); i++){
+        for(var j = Math.max(y-1,0); j <= Math.min(y + 1,rows - 1); j++){
+            if(board[i][j].Value == BOMB){
+                adjBombs++;
+            } else {
+                // This tile is adjacent to a known tile, we must keep this open
+                board[i][j].Value = 9;
+            }
+        }
+    }
+    return adjBombs;
+}
+
+function GameOver(){
+
+}
+
+function GenerateBoard(clickX,clickY){
+    placedBombs = 0;
+    while (placedBombs < bombs){
+        x = Math.floor(Math.random() * cols);
+        y = Math.floor(Math.random() * rows);
+
+        if(board[x][y].Value == -1) continue;
+        if(x >= clickX - 1 && x <= clickX + 1 &&
+        y >= clickY - 1 && y <= clickY + 1){
+            continue;
+        }
+        board[x][y].Value = BOMB;
+        board[x][y].Object.src = "Flag.png";
+        placedBombs++;
+    }
+}
+
 function CreateGame(difficulty){
     var boardContainer = document.getElementById("minesweeper-board");
-    var gameHTML = "<table>";
-    var rows, cols, bombs;
+    var gameHTML = "";
     if(difficulty == 0){
         rows = cols = 8;
         bombs = 10;
@@ -17,31 +80,38 @@ function CreateGame(difficulty){
         cols = 30;
         bombs = 99;
     }
+    boardContainer.style.gridTemplateColumns = "repeat(" + cols + ",25px)";
+    boardContainer.style.gridTemplateRows = "repeat(" + rows + ",25px)";
 
-    for(var y = 0; y < rows; y++){
+    for(let y = 0; y < rows; y++){
         gameHTML += "<tr>";
-        for(var x = 0; x < rows; x++){
+        for(let x = 0; x < cols; x++){
             gameHTML += 
-                "<td><input type='" + "image" + "' id='" + x + "," + y + "' src='" + 
-                "1.png" + "' class='" + "minesweeper-tile" + "'></td>";
+                "<div grid-row='" + x + "/" + (rows - 1) + "' grid-column='" + y + "/" + (cols - 1) + "'>"
+                + "<input type='" + "image" + "' id='" + x + "," + y + "' src='" + 
+                "_.png" + "' class='" + "minesweeper-tile" + "'></div>";
         }
     }
-    gameHTML += "</table>";
+    
     boardContainer.innerHTML = gameHTML;
     // The game is now laid out, time to grab references to it all
     board = new Array(cols);
-    for(var x = 0; x < cols; x++){
+    for(let x = 0; x < cols; x++){
         gameCol = new Array(rows);
-        for(var y = 0; y < rows; y++){
-            gameCol[y] = {"Object": document.getElementById(x + "," + y), "Value": 0, "Visibility": 0};
+        for(let y = 0; y < rows; y++){
+            gameCol[y] = {"Object": document.getElementById(x + "," + y), "Value": 0, "Visibility": BLANK};
+            gameCol[y].Object.onclick = function(){ Clicked(x,y,1)};
+            gameCol[y].Object.oncontextmenu = function(){ Clicked(x,y,2); return false; };
         }
         board[x] = gameCol;
+        //console.log(board[x][3].Object.onclick)
     }
-    board[1][1].Object.src = "8.png"
-    alert(board[4][2].Object);
+    firstClick = true;
+    //board[4][2].Object.src = "8.png";
+    //alert(board[4][2].Object);
 }
 
-CreateGame(0);
+CreateGame(2);
 
 
 
