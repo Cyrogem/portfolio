@@ -1,9 +1,11 @@
-#hello-there{
-    background-color: white;
-}
+
+
+
 
 .minesweeper-background{
     background-color: #222222;
+    vertical-align: middle;
+    justify-items: center;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -12,11 +14,23 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+/*
+.big{
+    display: flex;
+    justify-content: center;
+    max-width: 1110px;
+    padding-left: 100px;
+}*/
 
 #minesweeper-board{
+    margin: 0 auto;
+    vertical-align: middle;
+    justify-items: center;
     display: grid;
-    grid-template-columns: repeat(8,25px);
-    grid-template-rows: repeat(8,25px);
+    max-width: 1110px;
+    align-content: center;
+    grid-template-columns: repeat(8,35px);
+    grid-template-rows: repeat(8,35px);
     column-gap: 2px;
     row-gap: 2px;
     -webkit-touch-callout: none; /* iOS Safari */
@@ -39,24 +53,9 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-/*
-#minesweeper-board tr{
-    padding: 0;
-    margin: 0;
-}
-
-#minesweeper-board td{
-    max-width: 25px;
-    height: 25px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 3px;
-    border: none;
-    margin: 0;
-}*/
 
 .minesweeper-tile{
-    max-width: 25px;
+    max-width: 35px;
     margin-left: 0px;
     margin-bottom: 0px;
     outline: none;

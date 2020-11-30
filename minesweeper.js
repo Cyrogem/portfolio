@@ -1,7 +1,10 @@
 BOMB = -1;
-BLANK = 0;
-SEEN = 1;
+UNKNOWN = 0;
+KNOWN = 1;
 FLAGGED = 2;
+LEFTCLICK = 1;
+RIGHTCLICK = 2;
+TILESIZE = 35;
 
 var board = [];
 var rows, cols, bombs;
@@ -17,14 +20,34 @@ function Clicked(x, y, input){
     }
 
     tile = board[x][y];
-    if(tile.Visibility == 0){
-        // Blank tile clicked
-        if(tile.Value == BOMB){
-            GameOver();
-            return;
-        } else {
-            tile.Value = AdjacentBombs(x,y);
-            tile.Object.src = String(tile.Value + ".png");
+    if (input == RIGHTCLICK){
+        if(tile.Visibility == UNKNOWN){
+            tile.Visibility = FLAGGED;
+            tile.Object.src = "flag.png"
+        } else if (tile.Visibility == FLAGGED){
+            tile.Visibility = UNKNOWN;
+            tile.Object.src = "_.png"
+        }
+    }else{
+        // Left click
+        if(tile.Visibility == 0){
+            // Blank tile clicked
+            if(tile.Value == BOMB){
+                GameOver();
+                return;
+            } else {
+                tile.Value = AdjacentBombs(x,y);
+                tile.Object.src = String(tile.Value + ".png");
+                tile.Visibility = KNOWN;
+                if(tile.Value == 0){
+                    RevealAdjacents(x,y);
+                }
+            }
+        } else if (tile.Visibility == KNOWN){
+            // Speed adjacents
+            if(tile.Value == AdjacentFlags(x,y)){
+                RevealAdjacents(x,y);
+            }
         }
     }
 }
@@ -35,17 +58,47 @@ function AdjacentBombs(x,y){
         for(var j = Math.max(y-1,0); j <= Math.min(y + 1,rows - 1); j++){
             if(board[i][j].Value == BOMB){
                 adjBombs++;
-            } else {
-                // This tile is adjacent to a known tile, we must keep this open
-                board[i][j].Value = 9;
             }
         }
     }
     return adjBombs;
 }
+function AdjacentFlags(x,y){
+    adjFlags = 0;
+    for(var i = Math.max(x-1,0); i <= Math.min(x + 1,cols - 1); i++){
+        for(var j = Math.max(y-1,0); j <= Math.min(y + 1,rows - 1); j++){
+            if(board[i][j].Visibility == FLAGGED){
+                adjFlags++;
+            }
+        }
+    }
+    return adjFlags;
+}
+function RevealAdjacents(x,y){
+    for(var i = Math.max(x-1,0); i <= Math.min(x + 1,cols - 1); i++){
+        for(var j = Math.max(y-1,0); j <= Math.min(y + 1,rows - 1); j++){
+            if(board[i][j].Visibility == UNKNOWN){
+                Clicked(i,j,LEFTCLICK);
+            }
+        }
+    }
+}
+function RevealAll(){
+    for(var x = 0; x < cols; x++){
+        for(var y = 0; y < rows; y++){
+            if(board[x][y].Visibility == UNKNOWN){
+                if(board[x][y].Value == BOMB){
+                    board[x][y].Object.src = "bomb.png";
+                } else {
+                    board[x][y].Object.src = String(AdjacentBombs(x,y) + ".png");
+                }
+            }
+        }
+    }
+}
 
 function GameOver(){
-
+    RevealAll();
 }
 
 function GenerateBoard(clickX,clickY){
@@ -60,7 +113,7 @@ function GenerateBoard(clickX,clickY){
             continue;
         }
         board[x][y].Value = BOMB;
-        board[x][y].Object.src = "Flag.png";
+        //board[x][y].Object.src = "flag.png";
         placedBombs++;
     }
 }
@@ -80,14 +133,15 @@ function CreateGame(difficulty){
         cols = 30;
         bombs = 99;
     }
-    boardContainer.style.gridTemplateColumns = "repeat(" + cols + ",25px)";
-    boardContainer.style.gridTemplateRows = "repeat(" + rows + ",25px)";
+    boardContainer.style.gridTemplateColumns = "repeat(" + cols + "," + TILESIZE + "px)";
+    boardContainer.style.gridTemplateRows = "repeat(" + rows + "," + TILESIZE + "px)";
+    
 
     for(let y = 0; y < rows; y++){
-        gameHTML += "<tr>";
+        //gameHTML += "<tr>";
         for(let x = 0; x < cols; x++){
             gameHTML += 
-                "<div grid-row='" + x + "/" + (rows - 1) + "' grid-column='" + y + "/" + (cols - 1) + "'>"
+                "<div grid-row='" + x + "' grid-column='" + y + "'>"
                 + "<input type='" + "image" + "' id='" + x + "," + y + "' src='" + 
                 "_.png" + "' class='" + "minesweeper-tile" + "'></div>";
         }
@@ -99,9 +153,9 @@ function CreateGame(difficulty){
     for(let x = 0; x < cols; x++){
         gameCol = new Array(rows);
         for(let y = 0; y < rows; y++){
-            gameCol[y] = {"Object": document.getElementById(x + "," + y), "Value": 0, "Visibility": BLANK};
-            gameCol[y].Object.onclick = function(){ Clicked(x,y,1)};
-            gameCol[y].Object.oncontextmenu = function(){ Clicked(x,y,2); return false; };
+            gameCol[y] = {"Object": document.getElementById(x + "," + y), "Value": 0, "Visibility": UNKNOWN};
+            gameCol[y].Object.onclick = function(){ Clicked(x,y,LEFTCLICK)};
+            gameCol[y].Object.oncontextmenu = function(){ Clicked(x,y,RIGHTCLICK); return false; };
         }
         board[x] = gameCol;
         //console.log(board[x][3].Object.onclick)
