@@ -7,8 +7,58 @@
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body class="minesweeper-background">
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-button">
+                <a href="index.html">HOME</a>
+            </div>
+            <div class="nav-button">
+                |
+            </div>
+            <div class="nav-button">
+                <a href="minesweeper.html">MINESWEEPER</a>
+            </div>
+            <div class="nav-button">
+                |
+            </div>
+            <div class="nav-button">
+                <a href="projects.html">PROJECTS</a>
+            </div>
+            <div class="nav-button">
+                |
+            </div>
+            <div class="nav-button">
+                <a href="blog.html">BLOG</a>
+            </div>
+            <div class="nav-button">
+                |
+            </div>
+            <div class="nav-button">
+                <a href="about.html">ABOUT&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+            </div>
+
+        </nav>
+    </header>
     
-    <div class="big">
+    <div class="center bottom-space" >
+        <div id="minesweeper-settings">
+            <div class="center">
+                <input type="image" src="easy.png" id="minesweeper-easy" class="minesweeper-difficulty">
+                <input type="image" src="medium.png" id="minesweeper-medium" class="minesweeper-difficulty">
+                <input type="image" src="hard.png" id="minesweeper-hard" class="minesweeper-difficulty">
+            </div>
+            <div class="center">
+                <div class="minesweeper-difficulty" id="minesweeper-time">Time - 0:00</div>
+                <div class="minesweeper-difficulty">&nbsp&nbsp</div>
+                <div class="minesweeper-difficulty" id="minesweeper-best">Best - 0:00</div>
+                <div class="minesweeper-difficulty">&nbsp&nbsp</div>
+                <div class="minesweeper-difficulty" id="minesweeper-flags">Flags - 0/10</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="minesweeper-container">
         <div id="minesweeper-board" oncontextmenu="return false;">
             <!--Game board area, set in code-->
         </div>

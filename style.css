@@ -1,6 +1,65 @@
+.nav-bar .nav-button{
+    display: inline-block;
+    padding-inline: 20px;
+    text-align: center;
+}
 
+header{
+    position: sticky;
+    display: inline-block;
+    text-align: right;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: whitesmoke;
+    font-size: 30px;
+    width: 100%;
+}
 
+header a{
+    text-align: right;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 20px;
+}
 
+.nav-bar{
+    text-align: right;
+    border: white;
+    border-width: 1px;
+    align-content: center;
+    position: relative;
+
+    background-color: teal;
+    padding:10px;
+    padding-top: 5px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-space{
+    margin-bottom: 10px;
+}
+
+#minesweeper-settings{
+    border: solid whitesmoke 2px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.minesweeper-difficulty{
+    margin: 5px;
+    margin-bottom: 2px;
+    display: inline;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 24px;
+}
 
 .minesweeper-background{
     background-color: #222222;
@@ -14,13 +73,6 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-/*
-.big{
-    display: flex;
-    justify-content: center;
-    max-width: 1110px;
-    padding-left: 100px;
-}*/
 
 #minesweeper-board{
     margin: 0 auto;
@@ -66,5 +118,6 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+    -webkit-user-drag: none;
 }
 
