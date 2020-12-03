@@ -9,6 +9,17 @@ TILESIZE = 35;
 var board = [];
 var rows, cols, bombs;
 var firstClick = false;
+var startTime, gameTime, runningTimer;
+var revealedTiles, totalTiles, placedFlags;
+var bestTime = 10000000;
+
+document.getElementById("minesweeper-easy").onclick = function(){CreateGame(0)};
+document.getElementById("minesweeper-medium").onclick = function(){CreateGame(1)};
+document.getElementById("minesweeper-hard").onclick = function(){CreateGame(2)};
+
+var timer = document.getElementById("minesweeper-time");
+var bestTimer = document.getElementById("minesweeper-best");
+var flags = document.getElementById("minesweeper-flags");
 
 function Clicked(x, y, input){
     //alert(x + " " + y);
@@ -17,17 +28,21 @@ function Clicked(x, y, input){
         //Generate board
         GenerateBoard(x,y);
         firstClick = false;
+        StartTimer();
     }
-
+    
     tile = board[x][y];
     if (input == RIGHTCLICK){
         if(tile.Visibility == UNKNOWN){
             tile.Visibility = FLAGGED;
             tile.Object.src = "flag.png"
+            placedFlags++;
         } else if (tile.Visibility == FLAGGED){
             tile.Visibility = UNKNOWN;
             tile.Object.src = "_.png"
+            placedFlags--;
         }
+        UpdateFlagCount();
     }else{
         // Left click
         if(tile.Visibility == 0){
@@ -39,6 +54,7 @@ function Clicked(x, y, input){
                 tile.Value = AdjacentBombs(x,y);
                 tile.Object.src = String(tile.Value + ".png");
                 tile.Visibility = KNOWN;
+                revealedTiles++;
                 if(tile.Value == 0){
                     RevealAdjacents(x,y);
                 }
@@ -48,6 +64,11 @@ function Clicked(x, y, input){
             if(tile.Value == AdjacentFlags(x,y)){
                 RevealAdjacents(x,y);
             }
+        }
+
+        // Check for win
+        if(totalTiles - revealedTiles == bombs){
+            GameWin();
         }
     }
 }
@@ -99,6 +120,35 @@ function RevealAll(){
 
 function GameOver(){
     RevealAll();
+    StopTimer();
+}
+function GameWin(){
+    StopTimer();
+    UpdateTimer();
+    if(gameTime < bestTime){
+        bestTime = gameTime;
+        var seconds = Round(gameTime / 1000,0) % 60;
+        var minutes = (Round(gameTime / 1000,0) - seconds) / 60;
+        if (seconds < 10) seconds = "0" + seconds;
+        bestTimer.innerHTML = "Best - " + minutes + ":" + seconds;
+    }
+}
+function StartTimer(){
+    startTime = performance.now();
+    runningTimer = setInterval(UpdateTimer,1000);
+}
+function UpdateTimer(){
+    gameTime = performance.now() - startTime;
+    var seconds = Round(gameTime / 1000,0) % 60;
+    var minutes = (Round(gameTime / 1000,0) - seconds) / 60;
+    if (seconds < 10) seconds = "0" + seconds;
+    timer.innerHTML = "Time - " + minutes + ":" + seconds;
+}
+function StopTimer(){
+    clearInterval(runningTimer);
+}
+function UpdateFlagCount(){
+    flags.innerHTML = "Flags - " + placedFlags + "/" + bombs;
 }
 
 function GenerateBoard(clickX,clickY){
@@ -136,14 +186,16 @@ function CreateGame(difficulty){
     boardContainer.style.gridTemplateColumns = "repeat(" + cols + "," + TILESIZE + "px)";
     boardContainer.style.gridTemplateRows = "repeat(" + rows + "," + TILESIZE + "px)";
     
-
+    // We need to set the max width to ensure that this is centered
+    boardContainer.style.maxWidth = String(37 * cols) + "px";
+    
     for(let y = 0; y < rows; y++){
         //gameHTML += "<tr>";
         for(let x = 0; x < cols; x++){
             gameHTML += 
-                "<div grid-row='" + x + "' grid-column='" + y + "'>"
-                + "<input type='" + "image" + "' id='" + x + "," + y + "' src='" + 
-                "_.png" + "' class='" + "minesweeper-tile" + "'></div>";
+            "<div grid-row='" + x + "' grid-column='" + y + "'>"
+            + "<input type='" + "image" + "' id='" + x + "," + y + "' src='" + 
+            "_.png" + "' class='" + "minesweeper-tile" + "'></div>";
         }
     }
     
@@ -161,19 +213,25 @@ function CreateGame(difficulty){
         //console.log(board[x][3].Object.onclick)
     }
     firstClick = true;
+    revealedTiles = 0;
+    totalTiles = rows * cols;
+    placedFlags = 0;
+    UpdateFlagCount();
+    timer.innerHTML = "Time - 0:00";
+    
     //board[4][2].Object.src = "8.png";
     //alert(board[4][2].Object);
 }
 
-CreateGame(2);
+CreateGame(0);
 
 
 
-/*
-function round(num, places){
+function Round(num, places){
     return Math.round(num * Math.pow(10,places))/Math.pow(10,places);
 }
 
+/*
 function Update(){
     time += msFrequency;
     if(time % 1 == 0) {
