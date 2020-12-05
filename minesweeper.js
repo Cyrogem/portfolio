@@ -35,11 +35,11 @@ function Clicked(x, y, input){
     if (input == RIGHTCLICK){
         if(tile.Visibility == UNKNOWN){
             tile.Visibility = FLAGGED;
-            tile.Object.src = "flag.png"
+            tile.Object.src = "minesweeper_images/flag.png"
             placedFlags++;
         } else if (tile.Visibility == FLAGGED){
             tile.Visibility = UNKNOWN;
-            tile.Object.src = "_.png"
+            tile.Object.src = "minesweeper_images/_.png"
             placedFlags--;
         }
         UpdateFlagCount();
@@ -52,7 +52,7 @@ function Clicked(x, y, input){
                 return;
             } else {
                 tile.Value = AdjacentBombs(x,y);
-                tile.Object.src = String(tile.Value + ".png");
+                tile.Object.src = String("minesweeper_images/" + tile.Value + ".png");
                 tile.Visibility = KNOWN;
                 revealedTiles++;
                 if(tile.Value == 0){
@@ -109,9 +109,9 @@ function RevealAll(){
         for(var y = 0; y < rows; y++){
             if(board[x][y].Visibility == UNKNOWN){
                 if(board[x][y].Value == BOMB){
-                    board[x][y].Object.src = "bomb.png";
+                    board[x][y].Object.src = "minesweeper_images/bomb.png";
                 } else {
-                    board[x][y].Object.src = String(AdjacentBombs(x,y) + ".png");
+                    board[x][y].Object.src = String("minesweeper_images/" + AdjacentBombs(x,y) + ".png");
                 }
             }
         }
@@ -195,7 +195,7 @@ function CreateGame(difficulty){
             gameHTML += 
             "<div grid-row='" + x + "' grid-column='" + y + "'>"
             + "<input type='" + "image" + "' id='" + x + "," + y + "' src='" + 
-            "_.png" + "' class='" + "minesweeper-tile" + "'></div>";
+            "minesweeper_images/_.png" + "' class='" + "minesweeper-tile" + "'></div>";
         }
     }
     
@@ -218,6 +218,7 @@ function CreateGame(difficulty){
     placedFlags = 0;
     UpdateFlagCount();
     timer.innerHTML = "Time - 0:00";
+    StopTimer();
     
     //board[4][2].Object.src = "8.png";
     //alert(board[4][2].Object);
