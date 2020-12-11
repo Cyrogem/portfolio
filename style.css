@@ -46,6 +46,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .inline{
     display: inline-block;
@@ -58,10 +59,13 @@ html {
 }
 
 .project-block{
-    background-color: turquoise;
+    background-color: rgb(44, 174, 235);
+    box-shadow: gray 0 0 20px;
     margin: 0 auto;
-    max-width: 1000px;
+    width: 1000px;
     min-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .project-column{
@@ -86,8 +90,70 @@ html {
     padding-bottom: 10px;
 }
 
+article iframe{
+    margin-top: 10px;
+}
+
 .project-description{
     
+}
+
+.about-block{
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 300px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.about-me{
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 500px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.about-name{
+    font-size: 50px;
+    padding: 10px;
+}
+
+#resume{
+    width: 580px;
+    height: 480px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about-column-left{
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+}
+
+.about-column-right{
+    margin: 0 auto;
+    width: 35%;
+}
+
+.about-skills{
+    margin: 0 auto;
+}
+
+.about-window{
+    background-color: rgb(44, 174, 235);
+    box-shadow: gray 0 0 20px;
+}
+
+.portrait{
+    margin: 10px;
+    max-width: 20%;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 #minesweeper-settings{
