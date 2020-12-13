@@ -3,26 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Projects</title>
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
         <nav class="nav-bar">
             <div class="nav-button">
-                <a href="index.html">HOME</a>
-            </div>
-            <div class="nav-button">
-                |
-            </div>
-            <div class="nav-button">
-                <a href="minesweeper.html">MINESWEEPER</a>
-            </div>
-            <div class="nav-button">
-                |
-            </div>
-            <div class="nav-button">
-                <a href="projects.html">PROJECTS</a>
+                <a href="index.html">GAMES</a>
             </div>
             <div class="nav-button">
                 |
@@ -34,11 +22,129 @@
                 |
             </div>
             <div class="nav-button">
+                <a href="minesweeper.html">MINESWEEPER</a>
+            </div>
+            <div class="nav-button">
+                |
+            </div>
+            <div class="nav-button">
                 <a href="about.html">ABOUT&nbsp&nbsp&nbsp&nbsp&nbsp</a>
             </div>
 
         </nav>
     </header>
+    
+    <!-- Modals for the popups -->
+    <div class="modal" id="gs-modal">
+    <span class="close" id="gs-close">&times;</span>
+    <article class="project-block center">
+        <div class="project-column inline">
+            <div class="center">
+                <a href="https://gamejolt.com/games/GoldenSeas/455211" class="project-title">
+                    Golden Seas
+                </a>
+            </div>
+            <div class="project-subtitle center">
+                Genre - RTS<br>Role - Lead Programmer<br>Team Size - 5<br>Dev Time - 6 weeks
+            </div>
+            <div class="project-images center">
+                <img class="project-icon" alt="" src="project_images/gs-fight.png">
+                <img class="project-icon" alt="" src="project_images/gs-map.png">
+            </div>
+            <div class="project-images center">
+                <img class="project-icon" alt="" src="project_images/gs-plunder.png">
+                <img class="project-icon" alt="" src="project_images/gs-raid.png">
+            </div>
+        </div>
+        <div class="project-column inline">
+            <div class="project-description">
+                <p>
+                    Golden Seas is a real time strategy game where you play as a pirate lord commanding your
+                    fleets to attack and plunder the Royal Navy and her cities.  The game was made with a team 
+                    of two designers, one 3D artist, one UI artist, and myself as the sole programmer.
+                    It won the award for technical acheivement as well as being runner up for best in show in 
+                    the <a href="https://gamedev.msu.edu/student-game-showcase/">2019 Student Showcase Event</a>
+                    at MSU.
 
+                    <br><br><strong>Positives</strong><br>
+                    The game has a robust world generation toolset for the designers to create maps with, 
+                    as well as easy customization to all ships and cities. Teamwork and collaboration on the idea
+                    of how the final product should look went well.  Everybody helped with roles other than 
+                    their primary one.
+
+                    <br><br><strong>Negatives</strong><br>
+                    We ran out of time to flesh out and improve the AI, so it is incredibly rudimentary, 
+                    exploitable, and unbalanced.
+                    Tutorial is a long wall of text, not interactable.  Further work on the game would require
+                    creating a viable tutorial.
+
+                    <br><br><strong>What I learned</strong><br>
+                    Structuring classes planning for class inheritence ahead of time. Implementing designer 
+                    wishes for visuals and functionality of UI.  Realtime mesh generation.  XML serialization.
+                    Custom binary save files.
+                </p>
+            </div>
+            <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe" 
+            frameborder="0" width="480" height="150"></iframe>
+        </div>
+    </article>
+    </div>
+
+    <div class="modal" id="mansion-modal">
+    <span class="close" id="mansion-close">&times;</span>
+    <article class="project-block center">
+        <iframe src="https://widgets.gamejolt.com/package/v1?key=5Jk22HnF" 
+        frameborder="0" width="500" height="245" class="bottom-space"></iframe>
+    </article>
+    </div>
+
+    <div class="modal" id="tpr-modal">
+    <span class="close" id="tpr-close">&times;</span>
+    <article class="project-block center">
+        <iframe src="https://itch.io/embed/396836?linkback=true&amp;border_width=5" 
+        frameborder="0" width="500" height="175" class="bottom-space"></iframe>
+    </article>
+    </div>
+
+    <!-- Smaller buttons for Modals -->
+    <div class="project-grid center">
+        <div class="project-grid-box wide center" id="gs-grid">
+            <img src="project_images/golden-seas.png">
+            <div class="img-hover">
+                <div>
+                    <div class="title">Golden Seas</div><br>
+                A realtime strategy game I programmed
+                </div>
+            </div>
+        </div>
+        <div class="project-grid-box wide center" id="tpr-grid">
+            <img src="project_images/tpr.png">
+            <div class="img-hover">
+                <div>
+                    <div class="title">The Perfect Run</div><br>
+                A solo game I developed and published
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-grid center">
+        <div class="project-grid-box tall center" id="mansion-grid">
+            <img src="project_images/mansion.png">
+            <div class="img-hover">
+                <div>
+                    <div class="title">Revival at Marrow Mansion</div><br>
+                A point-n-click game jam murder mystery I programmed
+                </div>
+            </div>
+        </div>
+        <div class="project-grid-box center">
+            <img src="">
+            <div class="img-hover">
+                Oops nothing is here yet!
+            </div>
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
 </body>
 </html>
