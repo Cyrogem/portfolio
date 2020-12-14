@@ -8,6 +8,9 @@ header{
     font-size: 30px;
     width: 100%;
     min-width: 300px;
+    background-color: teal;
+    padding:10px;
+    padding-top: 5px;
 }
 
 header a{
@@ -18,23 +21,23 @@ header a{
     font-size: 20px;
 }
 
-html {
-    background-color: #033232;
-    vertical-align: middle;
-    justify-items: center;
-    font-family: sans-serif;
-}
-
 .nav-bar{
     text-align: right;
     border: white;
     border-width: 1px;
     align-content: center;
     position: relative;
+    display: inline-block;
+    margin-left: 120px;
+}
 
-    background-color: teal;
-    padding:10px;
-    padding-top: 5px;
+.nav-name{
+    text-align: left;
+    border: white;
+    border-width: 1px;
+    align-content: left;
+    position: absolute;
+    margin-left: 5px;
 }
 
 .nav-bar .nav-button{
@@ -43,10 +46,25 @@ html {
     text-align: center;
 }
 
+html {
+    background-color: #033232;
+    vertical-align: middle;
+    justify-items: center;
+    font-family: sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a{
+    color: inherit;
+}
+
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.center-text{
     text-align: center;
 }
 .inline{
@@ -60,12 +78,13 @@ html {
 }
 
 .project-block{
-    background-color: rgb(44, 174, 235);
+    background-color: #0A1045;
     box-shadow: gray 0 0 20px;
     margin: 0 auto;
     width: 1000px;
     margin-top: 10px;
     margin-bottom: 30px;
+    padding: 10px;
 
     animation-name: zoom;
     animation-duration: 0.5s;
@@ -85,11 +104,16 @@ html {
     max-width: 50%;
     min-width: 40%;
     margin-bottom: 10px;
+    padding: 10px;
 }
 
 .project-column img{
     max-width: 48%;    
     margin: 2px;
+}
+
+.project-column p{
+    margin: 0;
 }
 
 .project-title{
@@ -103,9 +127,20 @@ html {
     padding-bottom: 10px;
 }
 
-.project-description{
-    
+.project-icon{
+    max-height: 150px;
+    width: 50%;
 }
+
+.project-video{
+    max-height: 130px;
+    width: 48%;
+    margin-top: 0px;
+}
+
+/*.project-description{
+    
+}*/
 
 article iframe{
     margin-top: 10px;
@@ -120,7 +155,7 @@ article iframe{
     position: relative;
     width: 499px;
     height: 350px;
-    margin: 2px;
+    margin: 8px;
     overflow: hidden;
 }
 
@@ -153,6 +188,7 @@ article iframe{
 
 .img-hover{
     font-size: 30px;
+    text-align: center;
 }
 
 .img-hover .title{
@@ -183,6 +219,20 @@ article iframe{
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+#generic-modal{
+    display: none;
+    z-index: 2; /* Sit above specific modals */
+}
+
+#generic-image{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#generic-description{
+    font-size: 40px;
+}
+
 /* The Close Button */
 .close {
     position: absolute;
@@ -209,6 +259,47 @@ article iframe{
     margin-bottom: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.no-deco-color{    
+    color: inherit;
+}
+.no-deco-line{
+    text-decoration: none;
+}
+.no-deco{
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-block{
+    background-color: rgb(36, 86, 109);
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.blog-title{
+    font-size: 30px;
+}
+
+.blog-image{
+    overflow: hidden;
+    margin-left: 100px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.blog-content img{
+    max-width: 80%;
+    overflow: hidden;
+}
+
+.blog-content p{
+    margin-top: 20px;
 }
 
 .about-me{
@@ -250,6 +341,11 @@ article iframe{
 .about-window{
     background-color: rgb(36, 86, 109);
     color: whitesmoke;
+}
+
+.skill-icon{
+    width: 30px;
+    height: 30px;
 }
 
 .portrait{
