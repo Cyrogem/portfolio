@@ -83,6 +83,7 @@ a{
     margin-bottom: 10px;
 }
 
+/* #region Projects */
 .project-block{
     background-color: #0A1045;
     box-shadow: gray 0 0 20px;
@@ -154,13 +155,13 @@ article iframe{
 
 .project-grid{
     margin: 0 auto;
-    width: 1003px;
+    max-width: 1003px;
 }
 
 .project-grid-box{
     position: relative;
-    width: 499px;
-    height: 350px;
+    max-width: 499px;
+    max-width: 50%;
     margin: 8px;
     overflow: hidden;
 }
@@ -202,15 +203,12 @@ article iframe{
     font-size: 50px;
 }
 
-.wide img{
+.project-grid-box img{
     max-width: 100%;
 }
+/* #endregion */
 
-.tall img{
-    max-height: 100%;
-}
-
-/* The Modal (background) */
+/* #region Modals */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -256,18 +254,9 @@ article iframe{
     text-decoration: none;
     cursor: pointer;
 }
+/* #endregion */
 
-
-.about-block{
-    margin: 0 auto;
-    max-width: 1000px;
-    min-width: 300px;
-    margin-bottom: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-decoration: none;
-}
-
+/* #region Generic Deco
 .no-deco-color{    
     color: inherit;
 }
@@ -279,6 +268,7 @@ article iframe{
     color: inherit;
 }
 
+/* #region Blogs */
 .blog-block{
     background-color: rgb(36, 86, 109);
     margin: 0 auto;
@@ -307,7 +297,9 @@ article iframe{
 .blog-content p{
     margin-top: 20px;
 }
+/* #endregion */
 
+/* #region About Page */
 .about-me{
     margin: 0 auto;
     max-width: 1000px;
@@ -320,6 +312,16 @@ article iframe{
 .about-name{
     font-size: 50px;
     padding: 10px;
+}
+
+.about-block{
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 300px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
 }
 
 #resume{
@@ -362,7 +364,9 @@ article iframe{
     border-radius: 50%;
     object-fit: cover;
 }
+/* #endregion */
 
+/* #region Minesweeper */
 #minesweeper-settings{
     border: solid whitesmoke 2px;
     display: inline-block;
@@ -439,4 +443,5 @@ article iframe{
                                   supported by Chrome, Edge, Opera and Firefox */
     -webkit-user-drag: none;
 }
+/* #endregion */
 

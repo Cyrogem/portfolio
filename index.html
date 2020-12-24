@@ -50,7 +50,7 @@
 
     <!-- Smaller buttons for Modals -->
     <div class="project-grid center">
-        <div class="project-grid-box wide center" id="gs-grid">
+        <div class="project-grid-box center" id="gs-grid">
             <img src="project_images/golden-seas.png" alt="golden seas logo">
             <div class="img-hover">
                 <div>
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="project-grid-box wide center" id="tpr-grid">
+        <div class="project-grid-box center" id="tpr-grid">
             <img src="project_images/tpr.png" alt="the perfect run logo">
             <div class="img-hover">
                 <div>
@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="project-grid center">
-        <div class="project-grid-box tall center" id="mansion-grid">
+        <div class="project-grid-box center" id="mansion-grid">
             <img src="project_images/mansion.png" alt="marrow mansion logo">
             <div class="img-hover">
                 <div>
@@ -79,9 +79,13 @@
                 </div>
             </div>
         </div>
-        <div class="project-grid-box center">            
+        <div class="project-grid-box center" id="mail-snail">
+            <img src="project_images/mail-snail.png" alt="mail snail logo">      
             <div class="img-hover">
-                Check back later for more games and projects!
+                <div>
+                    <div class="title">Mail Snail</div><br>
+                A Peaceful Puzzle Platformer I programmed on
+                </div>
             </div>
         </div>
     </div>
@@ -98,6 +102,7 @@
     <!-- Modals for the popups -->
     <div class="modal" id="gs-modal">
     <span class="close" id="gs-close">&times;</span>
+    <h2 class="center" id="gs-title">Golden Seas</h2>
     <article class="project-block center">
         <div class="project-column inline">
             <div class="project-subtitle center">
@@ -145,6 +150,7 @@
 
     <div class="modal" id="mansion-modal">
     <span class="close" id="mansion-close">&times;</span>
+    <h2 class="center" id="mansion-title">Murder at Marrow Mansion</h2>
     <article class="project-block center">
         <div class="project-column inline">
             <div class="project-subtitle center">
@@ -198,6 +204,7 @@
 
     <div class="modal" id="tpr-modal">
     <span class="close" id="tpr-close">&times;</span>
+    <h2 class="center" id="tpr-title">The Perfect Run</h2>
     <article class="project-block center">
         <div class="project-column inline">
             <div class="project-subtitle center">
@@ -249,3 +256,40 @@
     <script src="projects.js"></script>
 </body>
 </html>
+
+<!-- Format for project modals
+    <div class="modal" id="NAME-modal">
+    <span class="close" id="NAME-close">&times;</span>
+    <h2 class="center" id="NAME-title">NAME</h2>
+    <article class="project-block center">
+        <div class="project-column inline">
+            <div class="project-subtitle center">
+                Genre - GAMEGENRE<br>Role - MYROLE<br>Team Size - X<br>Dev Time - X TIME
+            </div>
+            <div class="project-images center">
+                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+            </div>
+            <div class="project-images center">
+                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+            </div>
+            <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe"></iframe>
+        </div>
+        <div class="project-column inline">
+            <div class="project-description">
+                DESCRIPTION OF THE GAME
+
+                <br><br><div class="center-text"><strong>Positives</strong></div>
+                DESCRIPTION OF POSITIVES
+
+                <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+                DESCRIPTION OF SHORTFALLS
+
+                <br><br><div class="center-text"><strong>What I learned</strong></div>
+                WHAT I LEARNED
+            </div>
+        </div>
+    </article>
+    </div>
+-->
