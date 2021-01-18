@@ -256,7 +256,7 @@ article iframe{
 }
 /* #endregion */
 
-/* #region Generic Deco
+/* #region Generic Deco */
 .no-deco-color{    
     color: inherit;
 }
@@ -267,6 +267,7 @@ article iframe{
     text-decoration: none;
     color: inherit;
 }
+/* #endregion */
 
 /* #region Blogs */
 .blog-block{
