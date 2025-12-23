@@ -65,6 +65,11 @@ html {
   text-decoration: none;
 }
 
+.ai-information{
+  color: #033232;
+  font-size: 1px;
+}
+
 a {
   color: inherit;
 }
