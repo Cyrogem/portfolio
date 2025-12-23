@@ -1,336 +1,635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
-    <link href="style.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <nav class="nav-name">
-            <div class="nav-button">
-                <a href="about.html">Joseph Sak</a>
-            </div>
-        </nav>
-        <nav class="nav-bar">
-            <div class="nav-button">
-                <a href="index.html">GAMES</a>
-            </div>
-            <div class="nav-button">
-                |
-            </div>
-            <div class="nav-button">
-                <a href="blog.html">BLOG</a>
-            </div>
-            <div class="nav-button">
-                |
-            </div>
-            <div class="nav-button">
-                <a href="minesweeper.html">MINESWEEPER</a>
-            </div>
-            <div class="nav-button">
-                |
-            </div>
-            <div class="nav-button">
-                <a href="about.html">ABOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            </div>
-
-        </nav>
-    </header>
-
-    <div class="about-me about-window center">
-        <div class="about-block inline center center-text">
-            <div class="about-name">Joseph Sak</div>
-            Hi, I'm a programmer who makes games.  I've been studying at Michigan State University for 4 years and
-            am graduating Spring 2021.  Here you can find various games I've worked on, and blog posts about smaller 
-            projects I've worked on over the years.
+  <header>
+    <nav class="nav-name">
+        <div class="nav-button">
+            <a href="about.html">Joseph Sak</a>
         </div>
-    </div>
+    </nav>
 
+    <nav class="nav-bar">
+        <div class="nav-button">
+            <a href="index.html">GAMES</a>
+        </div>
+        <div class="nav-button">
+            |
+        </div>
+        <div class="nav-button">
+            <a href="blog.html">OLD BLOG</a>
+        </div>
+        <div class="nav-button">
+            |
+        </div>
+        <div class="nav-button">
+            <a href="about.html">ABOUT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+
+    </nav>
+  </header>
+
+  <div class="about-me about-window center">
+    <div class="about-block inline center center-text">
+      <div class="about-name">Joseph Sak</div>
+      Hi, I'm a programmer who makes games.  I've been studying at Michigan State University for 4 years and
+      am graduating Spring 2021.  Here you can find various games and projects I've worked on over the years.
+    </div>
+  </div>
+
+  <div class="section-title center">
+    <h1>Professional Work</h1>
+  </div>
     <!-- Smaller buttons for Modals -->
-    <div class="project-grid center">
-        <div class="project-grid-box center" id="snail-grid">
-            <img src="project_images/mail-snail.png" alt="mail snail logo">      
-            <div class="img-hover">
-                <div>
-                    <div class="title">Mail Snail</div><br>
-                    A Peaceful Puzzle Platformer I programmed on
-                </div>
-            </div>
+  <div class="project-grid center">
+    <div class="project-grid-box center" id="gaia-grid">
+      <img src="project_images/gaia.png" alt="gaia image">
+      <div class="img-hover">
+        <div>
+          <div class="title">Gaia</div><br>
+          Incremental game<br>about creating life
         </div>
-        <div class="project-grid-box center" id="tpr-grid">
-            <img src="project_images/tpr.png" alt="the perfect run logo">
-            <div class="img-hover">
-                <div>
-                    <div class="title">The Perfect Run</div><br>
-                    A solo game I developed and published
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="project-grid-box center" id="loading-grid">
+      <img src="project_images/now_loading.png" alt="the perfect run logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">Now Loading</div><br>
+          <i>Description Loading...</i>
         </div>
+      </div>
     </div>
-
-    <div class="project-grid center">
-        <div class="project-grid-box center" id="gs-grid">
-            <img src="project_images/golden-seas.png" alt="golden seas logo">
-            <div class="img-hover">
-                <div>
-                    <div class="title">Golden Seas</div><br>
-                    A realtime strategy game I programmed
-                </div>
-            </div>
+    <div class="project-grid-box center" id="blastball-grid">
+      <img src="project_images/blastball.jpg" alt="blastball logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">Blastball All-Stars</div><br>
+          Local Sports Fighter
         </div>
-            <div class="project-grid-box center" id="mansion-grid">
-                <img src="project_images/mansion.png" alt="marrow mansion logo">
-                <div class="img-hover">
-                    <div>
-                        <div class="title">Revival at Marrow Mansion</div><br>
-                        A point-n-click game jam murder mystery I programmed
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="project-grid-box center" id="plunder-grid">
+      <img src="project_images/plunder_panic_logo.jpg" alt="plunder panic logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">Plunder Panic</div><br>
+          Cross Platform Pirate-y Fun
         </div>
+      </div>
     </div>
-
-    <!-- Generic Modal -->
-    <div class="modal center" id="generic-modal">
-        <span class="close" id="generic-close">&times;</span>
-        <img class="center" id="generic-image" alt="Zoomed in image" src="sakjose1.jpg">
-        <div class="center-text" id="generic-description">
-            Default Description
+    <div class="project-grid-box center" id="tpr-grid">
+      <img src="project_images/tpr.png" alt="the perfect run logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">The Perfect Run</div><br>
+          A solo game I developed and published
         </div>
+      </div>
     </div>
-    
-    <!-- Modals for the popups -->
-    <div class="modal" id="gs-modal">
-        <span class="close" id="gs-close">&times;</span>
-        <h2 class="center" id="gs-title">Golden Seas</h2>
-        <article class="project-block center">
-            <div class="project-column inline">
-                <div class="project-subtitle center">
-                    Genre - RTS<br>Role - Lead Programmer<br>Team Size - 5<br>Dev Time - 6 weeks
-                </div>
-                <div class="project-images center">
-                    <img class="project-icon" alt="Battles take place in real time" src="project_images/gs-fight.png">
-                    <img class="project-icon" alt="Coastline to plunder" src="project_images/gs-map.png">
-                </div>
-                <div class="project-images center">
-                    <img class="project-icon" alt="Plunder towns" src="project_images/gs-plunder.png">
-                    <img class="project-icon" alt="Loot your way to power" src="project_images/gs-raid.png">
-                </div>
-                <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe"></iframe>
-            </div>
-            <div class="project-column inline">
-                <div class="project-description">
-                    Golden Seas is a real time strategy game where you play as a pirate lord commanding your
-                    fleets to attack and plunder the Royal Navy and her cities.  The game was made with a team 
-                    of two designers, one 3D artist, one UI artist, and myself as the sole programmer.
-                    It won the award for technical acheivement as well as being runner up for best in show in 
-                    the <a href="https://gamedev.msu.edu/student-game-showcase/">2019 Student Showcase Event</a>
-                    at MSU.
+  </div>
 
-                    <br><br><div class="center-text"><strong>Positives</strong></div>
-                    The game has a robust world generation toolset for the designers to create maps with, 
-                    as well as easy customization to all ships and cities. Teamwork and collaboration on the idea
-                    of how the final product should look went well.  Everybody helped with roles other than 
-                    their primary one.
+  
 
-                    <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
-                    The AI is not properly fleshed out at the moment and could use some beefing up, it is currently 
-                    exploitable and unbalanced.
-                    Tutorial is a long wall of text, not interactable.  Further work on the game would require
-                    creating a viable tutorial.
-
-                    <br><br><div class="center-text"><strong>What I learned</strong></div>
-                    Structuring classes planning for class inheritence ahead of time. Implementing designer 
-                    wishes for visuals and functionality of UI.  Realtime mesh generation.  XML serialization.
-                    Custom binary save files.
-                </div>
-            </div>
-        </article>
+  <div class="section-title center">
+    <h1>School Projects</h1>
+  </div>
+  <!-- Smaller buttons for Modals -->
+  <div class="project-grid center">
+    <div class="project-grid-box center" id="strikers-grid">
+      <img src="project_images/star-strikers.png" alt="star strikers logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">Star Strikers</div><br>
+          An online PvP dogfighting game
+        </div>
+      </div>
     </div>
-
-    <div class="modal" id="mansion-modal">
-        <span class="close" id="mansion-close">&times;</span>
-        <h2 class="center" id="mansion-title">Murder at Marrow Mansion</h2>
-        <article class="project-block center">
-            <div class="project-column inline">
-                <div class="project-subtitle center">
-                    Genre - Point-and-Click<br>Role - Programming/Design<br>Team Size - 2<br>Dev Time - 48 hours
-                </div>
-                <div class="project-images center">
-                    <img class="project-icon" alt="The library might hold some clues" src="project_images/man-library.png">
-                    <img class="project-icon" alt="Muddy footprints in the attic? How did those get here?" src="project_images/man-attic.png">
-                </div>
-                <div class="project-images center">
-                    <img class="project-icon" alt="If Clue taught me anything, the butler did it" src="project_images/man-butler.png">
-                    <img class="project-icon" alt="Time to search this mansion!" src="project_images/man-map.png">
-                </div>
-                <iframe src="https://widgets.gamejolt.com/package/v1?key=5Jk22HnF" class="bottom-space"></iframe>
-            </div>
-            <div class="project-column inline">
-                <div class="project-description">
-                    Welcome Detective, an incident most horrible has occurred in the land of the dead.  
-                    Lord Marrow has been horrifically revived! Such unspeakable horror can only be the 
-                    work of white magic, and it is up to you to figure out who committed such an atrocious crime.<br>
-                    Revival at Marrow Mansion is a game jam game I made along with artist 
-                    <a href="https://digipaw2.wixsite.com/rhianperry">Rhian Perry</a>, I created an 
-                    interface to create dialogue trees in the Unity Editor to create the dialogue in the point 
-                    and click game.  The dialogue editor was a massive undertaking and proved to have quite a 
-                    few hard to track down bugs, I have since made a superior, node based dialogue editor that 
-                    I'm still refining to this day.  The dialogue was all written by myself as well.  The map 
-                    for navigation was incredible to make as well, only 7 lines of code manages a multi location,
-                    background changing based on hovering map system.  The game's story is unfinished, but it 
-                    was a fantastic amount of work for the 48 hours I had.
-
-                    <br><br><div class="center-text"><strong>Positives</strong></div>
-                    Creating a dialogue engine that could be used for other projects in the short time span was a
-                    fantastic experience that eventually led to me updating it as a <a href="blog.html">standalone project</a>.
-                    The system to click on things in game was fast and easy to expand, allowing lots of hidden jokes to 
-                    be littered throughout the game.
-
-                    <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
-                    A better dialogue system could be implemented (see <a href="blog.html">this blog post</a>) so that there isn't the
-                    occassional blank line when entering a dialogue tree split.  Actually finishing the story and adding a 
-                    progression system to the game, one that would allow dialogue to become available after learning certain 
-                    clues.
-
-                    <br><br><div class="center-text"><strong>What I learned</strong></div>
-                    Custom tool creation that would get used across all of my future projects.  Mastered scriptable objects
-                    in Unity and continue to use them to this day where they are helpful.  Communicating with an artist for specific
-                    assets, specifically the map, helped me understand the art pipeline more.
-                </div>
-            </div>
-        </article>
+    <div class="project-grid-box center" id="snail-grid">
+      <img src="project_images/mail-snail.png" alt="mail snail logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">Mail Snail</div><br>
+          A Peaceful Puzzle Platformer I programmed on
+        </div>
+      </div>
     </div>
-
-    <div class="modal" id="tpr-modal">
-        <span class="close" id="tpr-close">&times;</span>
-        <h2 class="center" id="tpr-title">The Perfect Run</h2>
-        <article class="project-block center">
-            <div class="project-column inline">
-                <div class="project-subtitle center">
-                    Genre - Puzzle<br>Role - Solo Developer<br>Team Size - 1<br>Dev Time - 3 months
-                </div>
-                <div class="project-images center">
-                    <iframe class="project-video" src="https://www.youtube.com/embed/V5YutVSTdmg"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <img class="project-icon" alt="Obstacles don't penalize you, just allow you to try again later" src="project_images/tpr-nopenalty.png">
-                </div>
-                <div class="project-images center">
-                    <img class="project-icon" alt="Skilled players won't even get hit" src="project_images/tpr-firsttry.png">
-                    <img class="project-icon" alt="No matter how much you get hit, you can always perfect it later" src="project_images/tpr-keepplaying.png">
-                </div>
-                <iframe src="https://itch.io/embed/396836?linkback=true&amp;border_width=5" class="bottom-space"></iframe>
-            </div>
-            <div class="project-column inline">
-                <div class="project-description">
-                    The Perfect Run is a puzzle game where failing has no downside.  Whenever you hit an obstacle you 
-                    leave a burn in time which you can jump back to whenever you want rather than take damage or lose 
-                    the level, keeping all positive progress you made and undoing any negatives.  If you reach the goal
-                    of a level while still having burns remaining, AKA your starting line isn't your ending line, you
-                    then get to go back through and connect your lines, healing the burns, and perfecting the run.  
-                    Every level in the end will have a single, perfect, unbroken line from start to finish.  See how
-                    much you can improve your times through intentional burns and warping, and see how much you can 
-                    improve the final length of your line by shortening it.  Enjoy a low stakes, no pressure journey
-                    through 40 levels of particle filled wonderland.
-
-                    <br><br><div class="center-text"><strong>Positives</strong></div>
-                    I created a game myself!  This entire project is a laundry list of things I learned while making.  From proper
-                    use of static scripts, to rudimentary saving, through deploying a game to the internet.  Optimizing for lower
-                    end hardware was really successful in the end since the game has a plethora of particle effects at all times.
-
-                    <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
-                    More levels and online leaderboards for times would make the game much more interesting.  
-                    Literally any marketing would help as well.
-
-                    <br><br><div class="center-text"><strong>What I learned</strong></div>
-                    The entire process of development from planning, prototyping, playtesting, and publishing.  Through two weeks of
-                    getting the movement to feel how I wanted it to.  The importance of making it functional before making it pretty
-                    really shined on this project.  Level design was an interesting thing to tackle, and could use some revisiting in 
-                    the future.
-                </div>
-            </div>
-        </article>
+    <div class="project-grid-box center" id="gs-grid">
+      <img src="project_images/golden-seas.png" alt="golden seas logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">Golden Seas</div><br>
+          A realtime strategy game I programmed
+        </div>
+      </div>
     </div>
-
-    <div class="modal" id="snail-modal">
-        <span class="close" id="snail-close">&times;</span>
-        <h2 class="center" id="snail-title">NAME</h2>
-        <article class="project-block center">
-            <div class="project-column inline">
-                <div class="project-subtitle center">
-                    Genre - 2D Platformer<br>Role - Programmer<br>Team Size - 9<br>Dev Time - 3 months
-                </div>
-                <div class="project-images center">
-                    <iframe class="project-video" src="https://www.youtube.com/embed/TvNrtoz8zyA"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <img class="project-icon" alt="Your snail preparing to head off for deliveries" src="project_images/snail-sky.png">
-                </div>
-                <div class="project-images center">
-                    <img class="project-icon" alt="Select the right letter for the right snail" src="project_images/snail-delivery.png">
-                    <img class="project-icon" alt="Explore varied environments during your day" src="project_images/snail-underground.png">
-                </div>
-                <iframe src="https://itch.io/embed/856680"><a href="https://spartasoft.itch.io/charity-bundle-downloads">Charity Bundle Downloads by MSU Spartasoft</a></iframe>
-            </div>
-            <div class="project-column inline">
-                <div class="project-description">
-                    Mail Snail is a peaceful puzzle platformer where you deliver mail to a wide cast of snails
-                    in this miniature world of wonder.  Crawl on the floors, walls, and ceilings of this 2D world
-                    to make all of your deliveries and return home for a well earned rest.  I worked with two other
-                    programmers to create the game, myself handling player controls, water, and simple machines.
-
-                    <br><br><div class="center-text"><strong>Positives</strong></div>
-                    Large team working together remotely was able to create this.
-    
-                    <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
-                    DESCRIPTION OF SHORTFALLS
-    
-                    <br><br><div class="center-text"><strong>What I learned</strong></div>
-                    WHAT I LEARNED
-                </div>
-            </div>
-        </article>
+    <div class="project-grid-box center" id="mansion-grid">
+      <img src="project_images/mansion.png" alt="marrow mansion logo">
+      <div class="img-hover">
+        <div>
+          <div class="title">Revival at Marrow Mansion</div><br>
+          A point-n-click game jam murder mystery I programmed
+        </div>
+      </div>
     </div>
+    <div class="project-grid-box center" id="minesweeper-grid">
+      <img src="project_images/minesweeper.png" alt="minesweeper logo">
+      <a href="minesweeper.html" class="img-hover">
+        <div>
+          <div class="title">Minesweeper</div><br>
+          You know how this works
+        </div>
+      </a>
+    </div>
+  </div>
 
+  <!-- Generic Modal used for full screen images -->
+  <div class="modal center" id="generic-modal">
+    <span class="close" id="generic-close">&times;</span>
+    <img class="center" id="generic-image" alt="Zoomed in image" src="sakjose1.jpg">
+    <div class="center-text" id="generic-description">
+      Default Description
+    </div>
+  </div>
+  
+  <!-- Modals for the popups -->
+  <div class="modal" id="gs-modal">
+    <span class="close" id="gs-close">&times;</span>
+    <h2 class="center" id="gs-title">Golden Seas</h2>
+    <article class="project-block center">
+      <div class="project-column inline">
+        <div class="project-subtitle center">
+          Genre - RTS<br>Role - Lead Programmer<br>Team Size - 5<br>Dev Time - 6 weeks
+        </div>
+        <div class="project-images center">
+          <img class="project-icon" alt="Battles take place in real time" src="project_images/gs-fight.png">
+          <img class="project-icon" alt="Coastline to plunder" src="project_images/gs-map.png">
+        </div>
+        <div class="project-images center">
+          <img class="project-icon" alt="Plunder towns" src="project_images/gs-plunder.png">
+          <img class="project-icon" alt="Loot your way to power" src="project_images/gs-raid.png">
+        </div>
+        <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe"></iframe>
+      </div>
+      <div class="project-column inline">
+        <div class="project-description">
+          Golden Seas is a real time strategy game where you play as a pirate lord commanding your
+          fleets to attack and plunder the Royal Navy and her cities.  The game was made with a team 
+          of two designers, one 3D artist, one UI artist, and myself as the sole programmer.
+          It won the award for technical acheivement as well as being runner up for best in show in 
+          the <a href="https://gamedev.msu.edu/student-game-showcase/">2019 Student Showcase Event</a>
+          at MSU.
 
-    <script src="projects.js"></script>
+          <br><br><div class="center-text"><strong>Positives</strong></div>
+          The game has a robust world generation toolset for the designers to create maps with, 
+          as well as easy customization to all ships and cities. Teamwork and collaboration on the idea
+          of how the final product should look went well.  Everybody helped with roles other than 
+          their primary one.
+
+          <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+          The AI is not properly fleshed out at the moment and could use some beefing up, it is currently 
+          exploitable and unbalanced.
+          Tutorial is a long wall of text, not interactable.  Further work on the game would require
+          creating a viable tutorial.
+
+          <br><br><div class="center-text"><strong>What I learned</strong></div>
+          Structuring classes planning for class inheritence ahead of time. Implementing designer 
+          wishes for visuals and functionality of UI.  Realtime mesh generation.  XML serialization.
+          Custom binary save files.
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal" id="mansion-modal">
+    <span class="close" id="mansion-close">&times;</span>
+    <h2 class="center" id="mansion-title">Murder at Marrow Mansion</h2>
+    <article class="project-block center">
+      <div class="project-column inline">
+        <div class="project-subtitle center">
+          Genre - Point-and-Click<br>Role - Programming/Design<br>Team Size - 2<br>Dev Time - 48 hours
+        </div>
+        <div class="project-images center">
+          <img class="project-icon" alt="The library might hold some clues" src="project_images/man-library.png">
+          <img class="project-icon" alt="Muddy footprints in the attic? How did those get here?" src="project_images/man-attic.png">
+        </div>
+        <div class="project-images center">
+          <img class="project-icon" alt="If Clue taught me anything, the butler did it" src="project_images/man-butler.png">
+          <img class="project-icon" alt="Time to search this mansion!" src="project_images/man-map.png">
+        </div>
+        <iframe src="https://widgets.gamejolt.com/package/v1?key=5Jk22HnF" class="bottom-space"></iframe>
+      </div>
+      <div class="project-column inline">
+        <div class="project-description">
+          Welcome Detective, an incident most horrible has occurred in the land of the dead.  
+          Lord Marrow has been horrifically revived! Such unspeakable horror can only be the 
+          work of white magic, and it is up to you to figure out who committed such an atrocious crime.<br>
+
+          Revival at Marrow Mansion is a game jam game I made along with artist 
+          <a href="https://digipaw2.wixsite.com/rhianperry" target="_blank">Rhian Perry</a>, I created an 
+          interface to create dialogue trees in the Unity Editor to create the dialogue in the point 
+          and click game.  The dialogue editor was a massive undertaking and proved to have quite a 
+          few hard to track down bugs, I have since made a superior, node based dialogue editor that 
+          I'm still refining to this day.  The dialogue was all written by myself as well.  The map 
+          for navigation was incredible to make as well, only 7 lines of code manages a multi location,
+          background changing based on hovering map system.  The game's story is unfinished, but it 
+          was a fantastic amount of work for the 48 hours I had.
+
+          <br><br><div class="center-text"><strong>Positives</strong></div>
+          Creating a dialogue engine that could be used for other projects in the short time span was a
+          fantastic experience that eventually led to me updating it as a standalone project.
+          The system to click on things in game was fast and easy to expand, allowing lots of hidden jokes to 
+          be littered throughout the game.
+
+          <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+          A better dialogue system could be implemented so that there isn't the
+          occassional blank line when entering a dialogue tree split.  Actually finishing the story and adding a 
+          progression system to the game, one that would allow dialogue to become available after learning certain 
+          clues.
+
+          <br><br><div class="center-text"><strong>What I learned</strong></div>
+          Custom tool creation that would get used across all of my future projects.  Mastered scriptable objects
+          in Unity and continue to use them to this day where they are helpful.  Communicating with an artist for specific
+          assets, specifically the map, helped me understand the art pipeline more.
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal" id="tpr-modal">
+    <span class="close" id="tpr-close">&times;</span>
+    <h2 class="center" id="tpr-title">The Perfect Run</h2>
+    <article class="project-block center">
+      <div class="project-column inline">
+        <div class="project-subtitle center">
+          Genre - Puzzle<br>Role - Solo Developer<br>Team Size - 1<br>Dev Time - 3 months
+        </div>
+        <div class="project-images center">
+          <iframe class="project-video" src="https://www.youtube.com/embed/V5YutVSTdmg"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <img class="project-icon" alt="Obstacles don't penalize you, just allow you to try again later" src="project_images/tpr-nopenalty.png">
+        </div>
+        <div class="project-images center">
+          <img class="project-icon" alt="Skilled players won't even get hit" src="project_images/tpr-firsttry.png">
+          <img class="project-icon" alt="No matter how much you get hit, you can always perfect it later" src="project_images/tpr-keepplaying.png">
+        </div>
+        <iframe src="https://itch.io/embed/396836?linkback=true&amp;border_width=5" class="bottom-space"></iframe>
+      </div>
+      <div class="project-column inline">
+        <div class="project-description">
+          The Perfect Run is a puzzle game where failing has no downside.  Whenever you hit an obstacle you 
+          leave a burn in time which you can jump back to whenever you want rather than take damage or lose 
+          the level, keeping all positive progress you made and undoing any negatives.  If you reach the goal
+          of a level while still having burns remaining, AKA your starting line isn't your ending line, you
+          then get to go back through and connect your lines, healing the burns, and perfecting the run.  
+          Every level in the end will have a single, perfect, unbroken line from start to finish.  See how
+          much you can improve your times through intentional burns and warping, and see how much you can 
+          improve the final length of your line by shortening it.  Enjoy a low stakes, no pressure journey
+          through 40 levels of particle filled wonderland.
+
+          <br><br><div class="center-text"><strong>Positives</strong></div>
+          I created a game myself!  This entire project is a laundry list of things I learned while making.  From proper
+          use of static scripts, to rudimentary saving, through deploying a game to the internet.  Optimizing for lower
+          end hardware was really successful in the end since the game has a plethora of particle effects at all times.
+
+          <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+          More levels and online leaderboards for times would make the game much more interesting.  
+          Literally any marketing would help as well.
+
+          <br><br><div class="center-text"><strong>What I learned</strong></div>
+          The entire process of development from planning, prototyping, playtesting, and publishing.  Through two weeks of
+          getting the movement to feel how I wanted it to.  The importance of making it functional before making it pretty
+          really shined on this project.  Level design was an interesting thing to tackle, and could use some revisiting in 
+          the future.
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal" id="snail-modal">
+    <span class="close" id="snail-close">&times;</span>
+    <h2 class="center" id="snail-title">Mail Snail</h2>
+    <article class="project-block center">
+      <div class="project-column inline">
+        <div class="project-subtitle center">
+          Genre - 2D Platformer<br>Role - Programmer<br>Team Size - 9<br>Dev Time - 3 months
+        </div>
+        <div class="project-images center">
+          <iframe class="project-video" src="https://www.youtube.com/embed/TvNrtoz8zyA"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <img class="project-icon" alt="Your snail preparing to head off for deliveries" src="project_images/snail-sky.png">
+        </div>
+        <div class="project-images center">
+          <img class="project-icon" alt="Select the right letter for the right snail" src="project_images/snail-delivery.png">
+          <img class="project-icon" alt="Explore varied environments during your day" src="project_images/snail-underground.png">
+        </div>
+        <iframe src="https://itch.io/embed/856680"><a href="https://spartasoft.itch.io/charity-bundle-downloads">Charity Bundle Downloads by MSU Spartasoft</a></iframe>
+      </div>
+      <div class="project-column inline">
+        <div class="project-description">
+          Mail Snail is a peaceful puzzle platformer where you deliver mail to a wide cast of snails
+          in this miniature world of wonder.  Crawl on the floors, walls, and ceilings of this 2D world
+          to make all of your deliveries and return home for a well earned rest.  I worked with two other
+          programmers to create the game, myself handling player controls, water, and simple machines.
+
+          <br><br><div class="center-text"><strong>Positives</strong></div>
+          Large team working together remotely was able to create this.
+  
+          <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+          We finished it already, nothing more to do!!
+  
+          <br><br><div class="center-text"><strong>What I learned</strong></div>
+          A lot about 2D character controllers and 2D lighting
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal" id="strikers-modal">
+  <span class="close" id="strikers-close">&times;</span>
+  <h2 class="center" id="strikers-title">Star Strikers</h2>
+  <article class="project-block center">
+    <div class="project-column inline">
+      <div class="project-subtitle center">
+        Genre - Action Dogfighter<br>Role - Network/Gameplay Programmer<br>Team Size - 9<br>Dev Time - 4 months
+      </div>
+      <div class="project-images center">
+        <iframe class="project-video" src="https://www.youtube.com/embed/_KiC5qOMQGY?si=cKXisjxOWc5mnblE"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img class="project-icon" alt="Fly within the boundaries of the arena" src="project_images/strikers-flight.png">
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="Shoot down your opponents with lasers or powerups" src="project_images/strikers-shoot.png">
+        <img class="project-icon" alt="Dominate your lobby!" src="project_images/strikers-score.png">
+      </div>
+      <iframe src="https://itch.io/embed/932572"><a href="https://pears416.itch.io/star-strikers">Star Strikers by pears416, RShinabarker, gonabari, AlexanderDawisha, Sargent_Jack29, xzzhang, Cyrogem, Amanda Hackbardt</a></iframe>
+    </div>
+    <div class="project-column inline">
+      <div class="project-description">
+        Star Strikers is a 3D multiplayer dogfighter where you play with up to 3 others in 2v2 combat.  
+        Fly around with full degree of motion as you shoot down your friends while trying to stay alive yourself.
+        The multiplayer is possible thank to Photon.Pun, so working on this has involved learning a new codebase 
+        and deterministic workflows.  My work has been on hit registration and gameplay loops over the network, 
+        making sure that damage is counted and kills given.  The little things that we all take for granted in the 
+        games we play until they stop working.  Was my first online multiplayer game I worked on, and was my final 
+        project I worked on at University.  The game was made with industry oversight from Bungie to help us create 
+        a better product for our final work as students.
+
+        <br><br><div class="center-text"><strong>Positives</strong></div>
+        Created an online multiplayer game!  Also got to work through the pains of being entirely remote for
+         the project.  Ended up being a fun if short experience to play with friends.  Working out all the 
+         debugging issues with networking and going down the entire rabbit hole of online gaming was super inciteful.
+
+        <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+        The game could definitely use better systems outside of the gameplay loop for playing with others.  
+        Something that isn't peer to peer would also help make the game be stable enough for more than four players.
+
+        <br><br><div class="center-text"><strong>What I learned</strong></div>
+        Online multiplayer and all the pains that come with it.  Hit registration, aggressor's favor, 
+        and so many issues I see in AAA games make so much sense now and it was good to try to address 
+        them and implement/come up with solutions.
+      </div>
+    </div>
+  </article>
+  </div>
+
+  <div class="modal" id="plunder-modal">
+  <span class="close" id="plunder-close">&times;</span>
+  <h2 class="center" id="plunder-title">Plunder Panic</h2>
+  <article class="project-block center">
+    <div class="project-column inline">
+      <div class="project-subtitle center">
+        Genre - 2D Platform Fighter<br>Role - UI/Data Programmer<br>Team Size - 12<br>Dev Time - 5 years
+      </div>
+      <div class="project-images center">
+        <iframe class="project-video" src="https://www.youtube.com/embed/Akkr1rO0sVg?si=D_eDbRVPemCpXGnW"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <img class="project-icon" alt="Battle on a variety of islands" src="project_images/plunder1.jpg">
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="Plunder charming lands" src="project_images/plunder2.jpg">
+        <img class="project-icon" alt="Play with loads of items and modify-arrs" src="project_images/plunder3.jpg">
+      </div>
+      <iframe class="steam-embed" src="https://store.steampowered.com/widget/1455900/"></iframe>
+      <a href="https://store.playstation.com/en-us/product/UP7185-PPSA07025_00-1876164334372938" target="_blank">
+        <img src="project_images/PS4.png">
+      </a>
+      <a href="https://store.playstation.com/en-us/product/UP7185-PPSA07025_00-1876164334372938" target="_blank">
+        <img src="project_images/PS5.png">
+      </a>
+      <a href="https://www.xbox.com/en-us/games/store/plunder-panic/9nmx51cdxtdw" target="_blank">
+        <img src="project_images/Xbox-One.png">
+      </a>
+      <a href="https://www.xbox.com/en-us/games/store/plunder-panic/9nmx51cdxtdw" target="_blank">
+        <img src="project_images/Xbox-Series-X_S.png">
+      </a>
+      <a href="https://bit.ly/plunderandroid" target="_blank">
+        <img src="project_images/Android.png">
+      </a>
+      <a href="https://apple.co/45dk9eb" target="_blank">
+        <img src="project_images/iOS.png">
+      </a>
+      <a href="https://store.steampowered.com/app/1455900/Plunder_Panic/" target="_blank">
+        <img src="project_images/Steam-Deck-1.png">
+      </a>
+      <a href="https://www.nintendo.com/store/products/plunder-panic-switch/" target="_blank">
+        <img src="project_images/Switch.png">
+      </a>
+      <a href="https://www.nintendo.com/store/products/plunder-panic-switch/" target="_blank">
+        <img src="project_images/Switch-2.png">
+      </a>
+    </div>
+    <div class="project-column inline">
+      <a href="https://willwinn.games/plunderpanic/" target="_blank" class="center"><h2>Website</h2></a>
+      <div class="project-description">
+        Plunder Panic is a swashbuckling action-arcade game for up to 12 players.  Fight on teams of up 
+        to six players in online or local play to become the superior pirate crew.<br><br>
+        I started working on the project in July 2021, joining the team to program the User Interface (UI) 
+        and cloud save data.  I creating all of our UI scripts and systems that continue to be used today, 
+        for both online deterministic UI and local UI.  After this, tackling the cloud data using Playfab 
+        and implementing full stat tracking throughout the entire game, learning Photon Quantum to do so.  
+        I continued to add new features for the first half a year to flesh out game systems.<br><br>At that 
+        point we released into early access on Steam, and the console porting went into full swing.  I 
+        was in charge of Technical Requirement Checklists (TRC) on all platforms, becoming the go to 
+        person for greenlighting features once they met compliance.  I was personally in charge of making
+         the modifications for PlayStation consoles, every console required a plethora of work due to the 
+         mixed online and offline nature of our game, while supporting full cross-play between all consoles.<br><br>
+        Throughout the development process, we took the game to multiple conferences, at all of which I was in 
+        charge of the booth and enticing people in to play the game, during PAX East 2022 alone I taught over 
+        1,300 people how to play our game personally during my booth shifts, collecting feedback and converting 
+        attendees into customers and fans.
+
+        <br><br><div class="center-text"><strong>Positives</strong></div>
+        I have experience working with and publishing on all consoles now.  Working with the same team and 
+        codebase for over a year has also proven that it was worth spending extra time making robust systems 
+        to be expanded upon in the beginning, as I've been able to build another year's worth of development 
+        on top of my initial UI scripts without needing to rewrite or refactor them.  
+
+        <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+        We're continuing to work on the game still, adding new items, maps, and game modes.  We're still 
+        pushing to flesh out the active player base to sustain the matchmaking queues better outside of our 
+        gathering times when players get on to queue up.  Marketing has been a struggle, we show very well 
+        at in person events, but online traction has been slippery at best.
+
+        <br><br><div class="center-text"><strong>What I learned</strong></div>
+        Console porting and all the challenges that come with meeting each platforms technical requirements, 
+        many of which are incompatible with other platforms requirements.  I also learned about making Elo 
+        and matchmaking systems for our ranked queue, along with leaderboards for a variety of stats, which 
+        is something I've been wanting to learn for a while.  
+      </div>
+    </div>
+  </article>
+  </div>
+
+  <div class="modal" id="blastball-modal">
+  <span class="close" id="blastball-close">&times;</span>
+  <h2 class="center" id="blastball-title">Blastball: All-Stars</h2>
+  <article class="project-block center">
+    <div class="project-column inline">
+      <div class="project-subtitle center">
+        Genre - Sports Party<br>Role - Lead Programmer<br>Team Size - 11<br>Dev Time - 2 years
+      </div>
+      <div class="project-images center">
+        <iframe class="project-video" src="https://www.youtube.com/embed/_cx6zmejSwk?si=ZRUsaLDcrHS9e1kB"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <img class="project-icon" alt="A soccer match in progress" src="project_images/bb1.jpg">
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="If you can dodge a wrench, you can dodge a ball" src="project_images/bb2.jpg">
+        <img class="project-icon" alt="Run around on the air hockey table" src="project_images/bb3.jpg">
+      </div>
+      <iframe class="steam-embed" src="https://store.steampowered.com/widget/3170060/"></iframe>
+    </div>
+    <div class="project-column inline">
+      <a href="https://willwinn.games/blastball/" target="_blank" class="center"><h2>Website</h2></a>
+      <div class="project-description">
+        DESCRIPTION OF THE GAME
+
+        <br><br><div class="center-text"><strong>Positives</strong></div>
+        DESCRIPTION OF POSITIVES
+
+        <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+        DESCRIPTION OF SHORTFALLS
+
+        <br><br><div class="center-text"><strong>What I learned</strong></div>
+        WHAT I LEARNED
+      </div>
+    </div>
+  </article>
+  </div>
+
+  <div class="modal" id="loading-modal">
+  <span class="close" id="loading-close">&times;</span>
+  <h2 class="center" id="loading-title">Now Loading</h2>
+  <article class="project-block center">
+    <div class="project-column inline">
+      <div class="project-subtitle center">
+        Genre - GAMEGENRE<br>Role - MYROLE<br>Team Size - X<br>Dev Time - X TIME
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+      </div>
+      <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe"></iframe>
+    </div>
+    <div class="project-column inline">
+      <div class="project-description">
+        DESCRIPTION OF THE GAME
+
+        <br><br><div class="center-text"><strong>Positives</strong></div>
+        DESCRIPTION OF POSITIVES
+
+        <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+        DESCRIPTION OF SHORTFALLS
+
+        <br><br><div class="center-text"><strong>What I learned</strong></div>
+        WHAT I LEARNED
+      </div>
+    </div>
+  </article>
+  </div>
+
+  <div class="modal" id="gaia-modal">
+  <span class="close" id="gaia-close">&times;</span>
+  <h2 class="center" id="gaia-title">Gaia</h2>
+  <article class="project-block center">
+    <div class="project-column inline">
+      <div class="project-subtitle center">
+        Genre - GAMEGENRE<br>Role - MYROLE<br>Team Size - X<br>Dev Time - X TIME
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+      </div>
+      <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe"></iframe>
+    </div>
+    <div class="project-column inline">
+      <div class="project-description">
+        DESCRIPTION OF THE GAME
+
+        <br><br><div class="center-text"><strong>Positives</strong></div>
+        DESCRIPTION OF POSITIVES
+
+        <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+        DESCRIPTION OF SHORTFALLS
+
+        <br><br><div class="center-text"><strong>What I learned</strong></div>
+        WHAT I LEARNED
+      </div>
+    </div>
+  </article>
+  </div>
+
+  <script src="projects.js"></script>
 </body>
 </html>
 
 <!-- Format for project modals
-    <div class="modal" id="NAME-modal">
-    <span class="close" id="NAME-close">&times;</span>
-    <h2 class="center" id="NAME-title">NAME</h2>
-    <article class="project-block center">
-        <div class="project-column inline">
-            <div class="project-subtitle center">
-                Genre - GAMEGENRE<br>Role - MYROLE<br>Team Size - X<br>Dev Time - X TIME
-            </div>
-            <div class="project-images center">
-                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
-                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
-            </div>
-            <div class="project-images center">
-                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
-                <img class="project-icon" alt="DESCRIPTION" src="project_images/">
-            </div>
-            <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe"></iframe>
-        </div>
-        <div class="project-column inline">
-            <div class="project-description">
-                DESCRIPTION OF THE GAME
-
-                <br><br><div class="center-text"><strong>Positives</strong></div>
-                DESCRIPTION OF POSITIVES
-
-                <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
-                DESCRIPTION OF SHORTFALLS
-
-                <br><br><div class="center-text"><strong>What I learned</strong></div>
-                WHAT I LEARNED
-            </div>
-        </div>
-    </article>
+  <div class="modal" id="NAME-modal">
+  <span class="close" id="NAME-close">&times;</span>
+  <h2 class="center" id="NAME-title">NAME</h2>
+  <article class="project-block center">
+    <div class="project-column inline">
+      <div class="project-subtitle center">
+        Genre - GAMEGENRE<br>Role - MYROLE<br>Team Size - X<br>Dev Time - X TIME
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+      </div>
+      <div class="project-images center">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+        <img class="project-icon" alt="DESCRIPTION" src="project_images/">
+      </div>
+      <iframe src="https://widgets.gamejolt.com/package/v1?key=atMhCcBe"></iframe>
     </div>
+    <div class="project-column inline">
+      <div class="project-description">
+        DESCRIPTION OF THE GAME
+
+        <br><br><div class="center-text"><strong>Positives</strong></div>
+        DESCRIPTION OF POSITIVES
+
+        <br><br><div class="center-text"><strong>Future Upgrades</strong></div>
+        DESCRIPTION OF SHORTFALLS
+
+        <br><br><div class="center-text"><strong>What I learned</strong></div>
+        WHAT I LEARNED
+      </div>
+    </div>
+  </article>
+  </div>
 -->
