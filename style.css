@@ -290,6 +290,22 @@ article iframe {
 }
 /* #endregion */
 
+/* #region About Me */
+.about-contact {
+  font-size:larger;
+  padding: 0 10px 0 10px;
+  line-height: 1.5;
+}
+
+.about-me {
+  max-width: 1000px;
+  text-align-last: center;
+  padding: 0 0 20px 0;
+}
+
+
+/* #endregion */
+
 /* #region Generic Deco */
 .no-deco-color {  
   color: inherit;
