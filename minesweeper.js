@@ -109,9 +109,9 @@ function RevealAll(){
         for(var y = 0; y < rows; y++){
             if(board[x][y].Visibility == UNKNOWN){
                 if(board[x][y].Value == BOMB){
-                    board[x][y].Object.src = "minesweeper_images/bomb.png";
+                    board[x][y].Object.src = "/minesweeper_images/bomb.png";
                 } else {
-                    board[x][y].Object.src = String("minesweeper_images/" + AdjacentBombs(x,y) + ".png");
+                    board[x][y].Object.src = String("/minesweeper_images/" + AdjacentBombs(x,y) + ".png");
                 }
             }
         }

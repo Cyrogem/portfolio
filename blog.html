@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link href="style.css" rel="stylesheet"/>
+    <link href="blog-style.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
@@ -42,71 +43,18 @@
         </div>
     </div>
 
-    <article class="blog-block">
-        <h2 class="blog-title center-text">
-            Node Based Dialogue Editor
-        </h2>
-        <div class="blog-content">
-            <p>
-                After making my rudimentary dialogue editor, I knew I could do better and make something significantly more user
-                friendly than this:
-            </p>
-            <div class="blog-image"><img class="zoom" alt="What the dialogue used to look like" src="blog_images/old-dialogue.PNG"></div>
-            <p>
-                The entire system for creating dialogues here relied on adding new segments all over the place and hooking them 
-                together through integer indexes that they had, various checkboxes, and a healthy serving of trial and error.
-                The entire dialogue tried to flow from top to bottom between option and dialogue sets, but you could only next
-                dialogue inside of options once, so you couldn't really get a full tree setup going, only the shattered remains
-                of a tree with manual pointers as for where to go next.  This led to empty dialogues when you tried to leave a 
-                nested dialogue to jump to an external option set.  It was also hard to read visually, it was cluttered, difficult
-                to understand, and generally unlikeable.  It also had a large backend log of scriptable objects it created.  While
-                it did ultimately create one scriptable object you could place into a reader script I wrote, that single scriptable
-                object was often just a guide to referencing other scriptable objects in a mess.  Making it difficult to backtrack
-                to mistakes in dialogue that you wrote.  The entire reader script is virtually incomprehendable to the modern reader,
-                I think the only person who ever knew what was happening with it was myself back when I wrote it.
-            </p>
-            <p>
-                This system was not sustainable or expandable, and I would never want to use it on another project after this one.
-                In light of this, I decided to try to create a visual, node based dialogue editor as a personal project.  The goals
-                of the updated version are to:
-            </p>
-            <ul>
-                <li>Make the tool easier to look at</li>
-                <li>Make it easier to insert new lines in the middle</li>
-                <li>Make reading the output file easier</li>
-                <li>Condense the output to be only one file</li>
-                <li>Make it easier to change the path of the dialogue branching</li>
-                <li>Have a built in way to set exit flags</li>
-            </ul>
-            <p>
-                <strong>The Result</strong><br>                
-            </p>
-            <div class="blog-image"><img class="zoom" alt="What the dialogue looks like now" src="blog_images/new-dialogue.PNG"></div>
-            <p>
-                With a brand new look we have a wonderful new editor!!!  You can click and drag to move around the entire tree, 
-                drag individual nodes around, click the tabs on either side of the nodes to connect them up, and resize each tab 
-                using the button in the bottom right.  The output file is now completely inclusive, no extranuous clutter is made
-                elsewhere in the project.  You can easily set the name in the green entry node, and set exit flags in the red exit
-                nodes. Nodes can only exit to one location but multiple inputs are allowed for looping dialogue.  Adding new paths
-                mid tree is now only a right click -> add node away.  Loading and saving is easy, and with everything in window 
-                resizable it fits in any space you want to work with.  
-            </p>   
-            <p>
-                <strong>Future Additions</strong><br>                
-            </p> 
-            <p>
-                I plan on adding the ability to duplicate nodes later on, which would create a unconnected node that has the same 
-                contents, the ability to connect generic variables to the nodes allowing animations, voice lines, portraits, and 
-                more to be easily stored and set.  This would make it easy to integrate this into any existing dialogue setup. 
-                This would also include writing a generic reader which I have not currently done, although this has been tested out 
-                in a small game some friends made (no link unfortunately).  The ability to highlight multiple nodes to move them all
-                at once would be a nice quality of life improvement to make in the future, as well as being able to completely 
-                customize the path the the connection lines make so that they don't overlap with anything you don't want them to.
-            </p>
-        </div>
-    </article>
-
-
-    <script src="blog.js"></script>
+    <a href="/blogs/number.html" class="no-deco-line">
+        <article class="blog-block">
+            <div class="blog-title center-text center no-deco-line">
+                Counting to Absurd Values
+            </div>
+            <div class="blog-subtitle">
+                <p>
+                    Because I got tired of overflowing my structs after 1.8*10^308
+                </p>
+                <a href="/blogs/number.html" class="blog-image"><img alt="Really really large number" src="blog_images/number/really big number.png"></a>
+            </div>
+        </article>
+    </a>
 </body>
 </html>
